@@ -3,12 +3,12 @@
     <div class="container headingContainer">
       <div class="row d-flex justify-between" style="direction: rtl;">
         <div class="box">
+          <h1 style="text-align: right;">قسم من نحن</h1>
+        </div>
+        <div class="box">
           <div class="btn">
             <a href="#" style="text-align: right;">إجراء ثانوي</a>
           </div>
-        </div>
-        <div class="box">
-          <h1 style="text-align: right;">قسم من نحن</h1>
         </div>
       </div>
       <p>

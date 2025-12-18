@@ -117,6 +117,7 @@ header .topRowHeader {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  /* margin-left: 10px; */
   padding: 0px 20px;
   direction: rtl;
 }
@@ -124,6 +125,8 @@ header .topRowHeader .col-Top {
   gap: 20px;
   max-width: 1376px;
   direction: rtl;
+  width: 100%;
+  justify-content: flex-end;
 }
 /* header .topRowHeader .dropBtn{
     display: none !important;
@@ -154,6 +157,11 @@ header .col-Top .dropBtn .dropbutton {
 header .col-Top .dropBtn .dropbutton i {
   font-size: 9px;
 }
+
+/* RTL: Flip chevron in top header dropdown */
+[dir="rtl"] header .col-Top .dropBtn .dropbutton i.fa-chevron-down {
+  transform: rotate(180deg);
+}
 .dropContent {
   position: absolute;
   width: 120px;
@@ -175,6 +183,11 @@ header .col-Top .dropBtn .dropbutton i {
 .dropContent a:hover {
   color: var(--text-color-green);
   transform: translateX(10px);
+}
+
+/* RTL: Hover effect should move left in RTL */
+[dir="rtl"] .dropContent a:hover {
+  transform: translateX(-10px);
 }
 header .topRowHeader .dropBtn:hover .dropContent {
   display: block;
@@ -627,8 +640,12 @@ header .logo-icon {
 }
 
 .logo-text {
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 16px;
+  font-weight: 500;
+  color: #161616;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: right;
 }
 
 .nav-menu {
@@ -658,9 +675,9 @@ header .logo-icon {
   letter-spacing: 0%;
   text-align: right;
   vertical-align: bottom;
-
   transition: color 0.3s;
 }
+
 
 .nav-link:hover {
   color: #007a3d;
@@ -675,8 +692,18 @@ header .logo-icon {
   transition: transform 0.3s;
 }
 
+/* RTL: In RTL, arrow should point left (up) by default */
+[dir="rtl"] .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
 .nav-item:hover .dropdown-arrow {
   transform: rotate(180deg);
+}
+
+/* RTL: On hover in RTL, arrow should point down */
+[dir="rtl"] .nav-item:hover .dropdown-arrow {
+  transform: rotate(0deg);
 }
 header .col-Top .dropdown-menu {
   position: absolute !important;
@@ -723,13 +750,20 @@ header .col-Top .dropdown-menu {
 
 .dropdown-item:hover {
   background: #f5f5f5;
+  transform: translateX(-5px);
+}
+
+/* RTL: Hover effect should move left in RTL */
+[dir="rtl"] .dropdown-item:hover {
+  transform: translateX(5px);
 }
 
 .header-actions {
   display: flex;
   align-items: center;
-  flex-direction: row-reverse;
+  flex-direction: row;
   gap: 1.5rem;
+  direction: rtl;
 }
 
 .action-btn {
@@ -764,8 +798,8 @@ header .col-Top .dropdown-menu {
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s;
-  direction: rtl;
-  flex-direction: row-reverse;
+  direction: ltr;
+  flex-direction: row;
 }
 
 .lang-selector:hover {
@@ -798,6 +832,7 @@ header .col-Top .dropdown-menu {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
+  direction: rtl;
 }
 
 .search-overlay.active {
@@ -816,6 +851,7 @@ header .col-Top .dropdown-menu {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transform: translateY(-100%);
   transition: transform 0.3s;
+  direction: rtl;
 }
 
 .search-container.active {
@@ -1226,6 +1262,15 @@ header .col-Top .dropdown-menu {
 }
 header .topRowHeader .nav-link {
   color: #1b8354 !important;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 0.3rem;
+  font-weight: 400;
+  font-size: var(--text-sm);
+  line-height: var(--line-heigth-sm);
+  letter-spacing: 0%;
+  text-align: right;
 }
 header .nav-items span {
   font-weight: 400;

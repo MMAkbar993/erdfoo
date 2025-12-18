@@ -2,18 +2,8 @@
   <header>
     <div class="container-fluid">
       <div class="row topRowHeader">
-        <div class="col-Top d-flex align-center justify-end flex-d-row-r">
-          <div
-            class="navBox d-flex align-center justify-center flex-d-row-r"
-            style="gap: 10px"
-          >
-            <img
-              src="/assets/images/countryFlag.svg"
-              alt=""
-              class="img-fluid countryFlag"
-            />
-            <p>موقع حكومي مسجل لدى هيئة الحكومة الرقمية</p>
-          </div>
+        <div class="col-Top d-flex align-center flex-d-row-r">
+          
           <div class="navBox">
             <div class="nav-item">
               <a href="#" class="nav-link">
@@ -26,6 +16,18 @@
                 <a href="#" class="dropdown-item">كيف تتحقق؟ 3</a>
               </div>
             </div>
+          </div>
+          <div
+            class="navBox d-flex align-center justify-center flex-d-row-r"
+            style="gap: 10px"
+          >
+          <p>موقع حكومي مسجل لدى هيئة الحكومة الرقمية</p>
+            <img
+              src="/assets/images/countryFlag.svg"
+              alt=""
+              class="img-fluid countryFlag"
+            />
+            
           </div>
         </div>
       </div>

@@ -3,29 +3,41 @@
     <div class="footer-container">
       <div class="footer-content">
         <div class="footer-column">
+          <h3>ملخص</h3>
+          <ul class="footer-links">
+            <li v-for="(link, index) in summaryLinks" :key="index">
+              <a href="#">{{ link }}</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>روابط مهمة</h3>
+          <ul class="footer-links">
+            <li v-for="(link, index) in importantLinks" :key="index">
+              <a href="#">{{ link }}</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>الإتصال والدعم</h3>
+          <ul class="footer-links">
+            <li v-for="(link, index) in contactLinks" :key="index">
+              <a href="#">{{ link }}</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
           <h3>تابعنا على</h3>
           <ul class="footer-links">
             <div class="social-icons d-flex align-center flex-d-row-r">
               <a href="#">
-                <img
-                  src="/assets/images/instagram.svg"
-                  alt=""
-                  class="img-fluid"
-                />
+                <img src="/assets/images/instagram.svg" alt="" class="img-fluid" />
               </a>
               <a href="#">
-                <img
-                  src="/assets/images/linkedin.svg"
-                  alt=""
-                  class="img-fluid"
-                />
+                <img src="/assets/images/linkedin.svg" alt="" class="img-fluid" />
               </a>
               <a href="#">
-                <img
-                  src="/assets/images/twitter.svg"
-                  alt=""
-                  class="img-fluid"
-                />
+                <img src="/assets/images/twitter.svg" alt="" class="img-fluid" />
               </a>
             </div>
           </ul>
@@ -45,51 +57,10 @@
             </div>
           </div>
         </div>
-        <div class="footer-column">
-          <h3>الإتصال والدعم</h3>
-          <ul class="footer-links">
-            <li v-for="(link, index) in contactLinks" :key="index">
-              <a href="#">{{ link }}</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>روابط مهمة</h3>
-          <ul class="footer-links">
-            <li v-for="(link, index) in importantLinks" :key="index">
-              <a href="#">{{ link }}</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer-column">
-          <h3>ملخص</h3>
-          <ul class="footer-links">
-            <li v-for="(link, index) in summaryLinks" :key="index">
-              <a href="#">{{ link }}</a>
-            </li>
-          </ul>
-        </div>
       </div>
 
       <div class="footer-bottom">
-        <div class="footer-logos">
-          <div class="footer-logo">
-            <img
-              src="/assets/images/footerLogo.svg"
-              alt=""
-              class="img-fluid"
-            />
-          </div>
-          <div class="footer-logo">
-            <img
-              src="/assets/images/footerLogo.svg"
-              alt=""
-              class="img-fluid"
-            />
-          </div>
-        </div>
-
+       
         <div class="footer-info">
           <p>تاريخ آخر تحديث: 04/12/2020</p>
           <p>تم تطويره وصيانته بواسطة [الجهة اسم الجهة]</p>
@@ -102,6 +73,15 @@
             <a href="#">تطبيق الجوال</a>
           </div>
         </div>
+        <div class="footer-logos">
+          <div class="footer-logo">
+            <img src="/assets/images/footerLogo.svg" alt="" class="img-fluid" />
+          </div>
+          <div class="footer-logo">
+            <img src="/assets/images/footerLogo.svg" alt="" class="img-fluid" />
+          </div>
+        </div>
+
       </div>
     </div>
   </footer>
@@ -138,4 +118,3 @@ const summaryLinks = ref([
 <style scoped>
 /* Styles are in main CSS file */
 </style>
-

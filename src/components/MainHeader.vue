@@ -22,37 +22,6 @@
 
   <header class="header">
     <div class="header-container">
-      <div class="logo">
-        <a href="/" class="logo-icon">
-          <img src="/assets/images/logo.svg" alt="" class="img-fluid" />
-        </a>
-
-        <nav class="nav-menu" :class="{ active: isMobileMenuOpen }" id="navMenu">
-          <div
-            v-for="(item, index) in navItems"
-            :key="index"
-            class="nav-item"
-            :class="{ active: activeDropdown === index }"
-            @click="toggleDropdown(index)"
-          >
-            <a href="#" class="nav-link">
-              <span>{{ item.title }}</span>
-              <i class="fa-solid fa-chevron-down"></i>
-            </a>
-            <div class="dropdown-menu">
-              <a
-                v-for="(subItem, subIndex) in item.subItems"
-                :key="subIndex"
-                href="#"
-                class="dropdown-item"
-              >
-                {{ subItem }}
-              </a>
-            </div>
-          </div>
-        </nav>
-      </div>
-
       <div class="header-actions">
         <button class="action-btn" @click="openSearch">
           <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
@@ -87,6 +56,38 @@
           <span></span>
         </div>
       </div>
+
+      <nav class="nav-menu" :class="{ active: isMobileMenuOpen }" id="navMenu">
+          <div
+            v-for="(item, index) in navItems"
+            :key="index"
+            class="nav-item"
+            :class="{ active: activeDropdown === index }"
+            @click="toggleDropdown(index)"
+          >
+            <a href="#" class="nav-link">
+              <span>{{ item.title }}</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-menu">
+              <a
+                v-for="(subItem, subIndex) in item.subItems"
+                :key="subIndex"
+                href="#"
+                class="dropdown-item"
+              >
+                {{ subItem }}
+              </a>
+            </div>
+          </div>
+      </nav>
+
+    
+      <div class="logo">
+        <a href="/" class="logo-icon">
+          <img src="/assets/images/logo.svg" alt="" class="img-fluid" />
+        </a>
+      </div>
     </div>
   </header>
 </template>
@@ -101,13 +102,13 @@ const searchQuery = ref('')
 const searchInputRef = ref(null)
 
 const navItems = ref([
-  { title: 'تبويب 7', subItems: ['خيار 1', 'خيار 2', 'خيار 3'] },
-  { title: 'تبويب 6', subItems: ['خيار 1', 'خيار 2', 'خيار 3'] },
-  { title: 'تبويب 5', subItems: ['خيار 1', 'خيار 2', 'خيار 3'] },
-  { title: 'تبويب 4', subItems: ['خيار 1', 'خيار 2', 'خيار 3'] },
-  { title: 'تبويب 3', subItems: ['خيار 1', 'خيار 2', 'خيار 3'] },
+  { title: 'تبويب 1', subItems: ['خيار 1', 'خيار 2', 'خيار 3'] },
   { title: 'تبويب 2', subItems: ['خيار 1', 'خيار 2', 'خيار 3'] },
-  { title: 'تبويب 1', subItems: ['خيار 1', 'خيار 2', 'خيار 3'] }
+  { title: 'تبويب 3', subItems: ['خيار 1', 'خيار 2', 'خيار 3'] },
+  { title: 'تبويب 4', subItems: ['خيار 1', 'خيار 2', 'خيار 3'] },
+  { title: 'تبويب 5', subItems: ['خيار 1', 'خيار 2', 'خيار 3'] },
+  { title: 'تبويب 6', subItems: ['خيار 1', 'خيار 2', 'خيار 3'] },
+  { title: 'تبويب 7', subItems: ['خيار 1', 'خيار 2', 'خيار 3'] }
 ])
 
 const toggleDropdown = (index) => {
