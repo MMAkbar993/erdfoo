@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" dir="rtl">
     <TopHeader />
     <MainHeader />
     <HeroSection />
@@ -15,6 +15,7 @@
             line-height: 1.8;
             font-size: 14px;
             font-weight: 400;
+            text-align: right;
           "
         >
           تاريخ آخر تعديل: 04/12/2020 - 4:13 م بتوقيت السعودية

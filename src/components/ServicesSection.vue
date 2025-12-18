@@ -1,14 +1,14 @@
 <template>
   <section class="services">
     <div class="container headingContainer">
-      <div class="row d-flex justify-between">
+      <div class="row d-flex justify-between" style="direction: rtl;">
         <div class="box">
           <div class="btn">
-            <a href="#">عرض الكل</a>
+            <a href="#" style="text-align: right;">عرض الكل</a>
           </div>
         </div>
         <div class="box">
-          <h1>قسم الخدمات</h1>
+          <h1 style="text-align: right;">قسم الخدمات</h1>
         </div>
       </div>
       <p>
@@ -25,11 +25,14 @@
             :key="index"
             class="swiper-slide"
           >
-            <img
-              src="/assets/images/checkIcon.svg"
-              alt=""
-              class="img-fluid checkIcon"
-            />
+            <div style="text-align: right; direction: rtl;">
+              <img
+                src="/assets/images/checkIcon.svg"
+                alt=""
+                class="img-fluid checkIcon"
+                style="align-self: flex-end;"
+              />
+            </div>
             <h2>{{ service.title }}</h2>
             <p>{{ service.description }}</p>
             <div class="smallBox d-flex align-center justify-end">

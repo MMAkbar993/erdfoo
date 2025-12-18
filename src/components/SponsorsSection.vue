@@ -1,9 +1,9 @@
 <template>
   <section class="sponsers">
     <div class="container headingContainer">
-      <div class="row d-flex justify-end">
+      <div class="row d-flex justify-end" style="direction: rtl;">
         <div class="box">
-          <h1>قسم الشركاء</h1>
+          <h1 style="text-align: right;">قسم الشركاء</h1>
         </div>
       </div>
     </div>
@@ -65,6 +65,8 @@ onMounted(() => {
   if (sponsorsSwiper.value) {
     swiperInstance = new Swiper(sponsorsSwiper.value, {
       modules: [Navigation, Autoplay, Pagination],
+      direction: 'horizontal',
+      rtl: true,
       slidesPerView: 1,
       spaceBetween: 10,
       autoplay: {
@@ -94,8 +96,9 @@ onMounted(() => {
         }
       },
       navigation: {
-        prevEl: sponsorsSwiper.value.querySelector('.swiper-button-next'),
-        nextEl: sponsorsSwiper.value.querySelector('.swiper-button-prev')
+        // Swiper automatically handles RTL direction when rtl: true is set
+        nextEl: sponsorsSwiper.value.querySelector('.swiper-button-next'),
+        prevEl: sponsorsSwiper.value.querySelector('.swiper-button-prev')
       }
     })
   }

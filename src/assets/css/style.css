@@ -1,4 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap");
+
+html {
+  direction: rtl;
+}
+
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+body {
+  direction: rtl;
+  text-align: right;
+}
+
+body[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -24,6 +43,14 @@
 }
 body > * {
   text-align: right;
+}
+
+[dir="rtl"] {
+  direction: rtl;
+}
+
+[dir="rtl"] * {
+  text-align: inherit;
 }
 .align-center {
   align-items: center;
@@ -74,11 +101,13 @@ footer,
 section {
   max-width: 1440px;
   margin: auto;
+  direction: rtl;
 }
 .container {
   max-width: 1280px;
   margin: auto;
   padding: 50px 50px;
+  direction: rtl;
 }
 
 /* Main Code Starts here  */
@@ -87,12 +116,14 @@ header .topRowHeader {
   background-color: var(--light-bg-green);
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   padding: 0px 20px;
+  direction: rtl;
 }
 header .topRowHeader .col-Top {
   gap: 20px;
   max-width: 1376px;
+  direction: rtl;
 }
 /* header .topRowHeader .dropBtn{
     display: none !important;
@@ -130,17 +161,20 @@ header .col-Top .dropBtn .dropbutton i {
   padding: 10px 20px;
   border-radius: 6px;
   right: 0px;
+  left: auto;
   display: none;
+  text-align: right;
 }
 .dropContent a {
   font-size: var(--text-sm);
   color: var(--white-color);
   margin-bottom: 10px;
   display: block;
+  text-align: right;
 }
 .dropContent a:hover {
   color: var(--text-color-green);
-  transform: translateX(-10px);
+  transform: translateX(10px);
 }
 header .topRowHeader .dropBtn:hover .dropContent {
   display: block;
@@ -153,6 +187,7 @@ header .topRowHeader .dropBtn:hover .dropContent {
 .headingContainer .row {
   gap: 30px;
   margin-bottom: 24px;
+  direction: rtl;
 }
 .headingContainer .box .btn a {
   width: 99px;
@@ -169,12 +204,16 @@ header .topRowHeader .dropBtn:hover .dropContent {
   line-height: var(--line-heights-text-md);
   letter-spacing: 0%;
   color: var(--text-color);
+  text-align: center;
+  direction: rtl;
 }
 .headingContainer .box h1 {
   font-weight: 700;
   letter-spacing: 0%;
   font-size: 30px;
   line-height: 38px;
+  text-align: right;
+  direction: rtl;
 }
 .headingContainer  p {
   font-weight: 400;
@@ -211,6 +250,7 @@ header .topRowHeader .dropBtn:hover .dropContent {
   justify-content: space-between;
   text-align: center;
   flex-wrap: wrap;
+  direction: rtl;
 }
 
 /* code for blog section */
@@ -218,6 +258,7 @@ header .topRowHeader .dropBtn:hover .dropContent {
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
+  direction: rtl;
 }
 .blog .contentContainer .row .col-1 {
   flex-basis: 304px;
@@ -267,6 +308,8 @@ header .topRowHeader .dropBtn:hover .dropContent {
   border-radius: 4px;
   line-height: 24px;
   letter-spacing: 0%;
+  text-align: center;
+  direction: rtl;
 }
 .sponsers .swiper .swiper-slide {
   width: 98px;
@@ -296,6 +339,7 @@ header .topRowHeader .dropBtn:hover .dropContent {
 }
 .sponsers .row {
   position: relative;
+  direction: rtl;
 }
 
 :root {
@@ -320,13 +364,18 @@ header .topRowHeader .dropBtn:hover .dropContent {
   top: 58% !important;
 }
 
-.swiper-button-prev {
-  left: 5px;
+/* RTL: In RTL, next button should be on the left, prev on the right */
+[dir="rtl"] .swiper-button-prev {
+  right: 5px !important;
+  left: auto !important;
 }
 
-.swiper-button-next {
-  right: -22px !important;
+[dir="rtl"] .swiper-button-next {
+  left: -22px !important;
+  right: auto !important;
 }
+
+/* Swiper handles arrow directions automatically with rtl: true */
 
 .services {
   background-color: #f9fafb;
@@ -350,6 +399,7 @@ header .topRowHeader .dropBtn:hover .dropContent {
 }
 .services .swiper-slide img {
   margin-bottom: 10px;
+  align-self: flex-end;
 }
 .services .swiper-slide h2 {
   font-weight: 700;
@@ -370,6 +420,8 @@ header .topRowHeader .dropBtn:hover .dropContent {
 .services .swiper-slide .smallBox {
   gap: 8px;
   margin-top: 20px;
+  direction: rtl;
+  justify-content: flex-end;
 }
 .services .swiper-slide .smallBox .box {
   width: 39px;
@@ -404,7 +456,8 @@ header .topRowHeader .dropBtn:hover .dropContent {
 .services .swiper-slide .gridBtn {
   gap: 16px;
   margin-top: 20px;
-  justify-content: end;
+  justify-content: flex-end;
+  direction: rtl;
 }
 .services .swiper-slide .gridBtn .btn a {
   width: 99px;
@@ -420,6 +473,8 @@ header .topRowHeader .dropBtn:hover .dropContent {
   color: #161616;
   line-height: 24px;
   letter-spacing: 0%;
+  text-align: center;
+  direction: rtl;
 }
 .services .swiper-slide .gridBtn .btn .greenBg {
   width: 62px;
@@ -435,12 +490,15 @@ header .topRowHeader .dropBtn:hover .dropContent {
   line-height: 24px;
   letter-spacing: 0%;
   color: var(--white-color);
+  text-align: center;
+  direction: rtl;
 }
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
   bottom: -5px !important;
+  direction: rtl;
 }
 .services .mySwiperSerivces {
   padding-bottom: 30px;
@@ -454,16 +512,39 @@ header .topRowHeader .dropBtn:hover .dropContent {
   background: #1b8354 !important;
 }
 
+/* Hero section pagination - white dots */
+.hero-section .swiper-pagination {
+  text-align: center !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  right: auto !important;
+  width: auto !important;
+}
+
+.hero-section .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.5) !important;
+  opacity: 1 !important;
+}
+.hero-section .swiper-pagination-bullet-active {
+  background: var(--white-color) !important;
+}
+
 .hero-section .mySwiper .swiper-slide {
   display: flex;
-  align-items: end;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-end;
   flex-direction: column;
   min-height: 491px;
+  text-align: right;
+  direction: rtl;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 .hero-section .container {
   background: linear-gradient(45deg, #14573a 0%, #1b8354 100%);
   max-width: 1440px !important;
+  margin: 0 auto;
+  direction: rtl;
 }
 .hero-section .container .swiper-slide h1 {
   font-weight: 600;
@@ -473,6 +554,8 @@ header .topRowHeader .dropBtn:hover .dropContent {
   letter-spacing: -2%;
   text-align: right;
   margin-bottom: 24px;
+  width: 100%;
+  align-self: flex-end;
 }
 .hero-section .container .swiper-slide p {
   font-weight: 400;
@@ -483,22 +566,32 @@ header .topRowHeader .dropBtn:hover .dropContent {
   text-align: right;
   max-width: 624px;
   margin-bottom: 20px;
+  align-self: flex-end;
+  margin-right: 0;
+  margin-left: auto;
 }
+.hero-section .container .swiper-slide .btn {
+  align-self: flex-end;
+  margin-right: 0;
+  margin-left: auto;
+}
+
 .hero-section .container .swiper-slide .btn a {
-  width: 103px;
+  width: 99px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #1b8354;
-  border-radius: Radius/radius-sm;
-
+  background-color: var(--white-color);
+  border: 1px solid #d2d6db;
   border-radius: 4px;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0%;
-  color: var(--white-color);
+  color: var(--text-color);
+  text-align: center;
+  direction: rtl;
 }
 
 @media screen and (max-width: 560px) {
@@ -517,6 +610,7 @@ header .topRowHeader .dropBtn:hover .dropContent {
   height: 70px;
   gap: 2rem;
   padding: 0px 20px;
+  direction: rtl;
 }
 
 .logo {
@@ -543,6 +637,7 @@ header .logo-icon {
   gap: 1.5rem;
   flex: 1;
   justify-content: center;
+  direction: rtl;
 }
 
 .nav-item {
@@ -591,6 +686,7 @@ header .col-Top .dropdown-menu {
   position: absolute;
   top: 23px;
   right: 0;
+  left: auto;
   background: white;
   border: 1px solid #e0e0e0;
   border-radius: 4px;
@@ -602,6 +698,8 @@ header .col-Top .dropdown-menu {
   transition: all 0.3s;
   margin-top: 0.5rem;
   z-index: 2;
+  text-align: right;
+  direction: rtl;
 }
 
 .nav-item:hover .dropdown-menu {
@@ -619,6 +717,8 @@ header .col-Top .dropdown-menu {
   text-decoration: none;
   display: block;
   transition: background 0.2s;
+  text-align: right;
+  direction: rtl;
 }
 
 .dropdown-item:hover {
@@ -642,6 +742,8 @@ header .col-Top .dropdown-menu {
   color: #333;
   font-size: 0.95rem;
   transition: color 0.3s;
+  direction: rtl;
+  flex-direction: row-reverse;
 }
 
 .action-btn:hover {
@@ -662,6 +764,8 @@ header .col-Top .dropdown-menu {
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s;
+  direction: rtl;
+  flex-direction: row-reverse;
 }
 
 .lang-selector:hover {
@@ -724,6 +828,8 @@ header .col-Top .dropdown-menu {
   display: flex;
   align-items: center;
   gap: 1rem;
+  flex-direction: row-reverse;
+  direction: rtl;
 }
 
 .search-input {
@@ -734,6 +840,8 @@ header .col-Top .dropdown-menu {
   font-size: 1.1rem;
   outline: none;
   transition: border-color 0.3s;
+  text-align: right;
+  direction: rtl;
 }
 
 .search-input:focus {
@@ -771,6 +879,7 @@ header .col-Top .dropdown-menu {
     position: fixed;
     top: 0px;
     right: -100%;
+    left: auto;
     width: 320px;
     height: calc(100vh - 60px);
     background: white;
@@ -782,6 +891,8 @@ header .col-Top .dropdown-menu {
     transition: right 0.3s;
     overflow-y: auto;
     z-index: 99;
+    direction: rtl;
+    text-align: right;
   }
 
   .nav-menu.active {
@@ -802,8 +913,10 @@ header .col-Top .dropdown-menu {
     box-shadow: none;
     border: none;
     border-right: 2px solid #007a3d;
-    margin: 0.5rem 0 0 1rem;
+    margin: 0.5rem 1rem 0 0;
     display: none;
+    text-align: right;
+    direction: rtl;
   }
 
   .nav-item.active .dropdown-menu {
@@ -867,6 +980,7 @@ header .col-Top .dropdown-menu {
   grid-template-columns: repeat(4, 1fr);
   gap: 3rem;
   margin-bottom: 3rem;
+  direction: rtl;
 }
 
 .footer-column h3 {
@@ -904,6 +1018,7 @@ header .col-Top .dropdown-menu {
 .social-icons {
   display: flex;
   gap: 8px;
+  direction: rtl;
 }
 
 .social-icon {
@@ -941,8 +1056,9 @@ header .col-Top .dropdown-menu {
 
 .tools-icons {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 8px;
+  direction: rtl;
 }
 
 .tool-icon:hover {
@@ -963,6 +1079,7 @@ header .col-Top .dropdown-menu {
   align-items: center;
   flex-wrap: wrap;
   gap: 1.5rem;
+  direction: rtl;
 }
 
 .footer-logos {
@@ -1008,10 +1125,11 @@ header .col-Top .dropdown-menu {
 .footer-links-bottom {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 1.5rem;
   font-size: 0.9rem;
   margin-bottom: 20px;
+  direction: rtl;
 }
 
 .footer-links-bottom a {

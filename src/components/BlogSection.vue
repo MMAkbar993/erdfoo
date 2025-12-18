@@ -1,14 +1,14 @@
 <template>
   <section class="blog">
     <div class="container headingContainer">
-      <div class="row d-flex justify-between">
+      <div class="row d-flex justify-between" style="direction: rtl;">
         <div class="box">
           <div class="btn">
-            <a href="#">عرض الكل</a>
+            <a href="#" style="text-align: right;">عرض الكل</a>
           </div>
         </div>
         <div class="box">
-          <h1>قسم الاخبار والمقالات</h1>
+          <h1 style="text-align: right;">قسم الاخبار والمقالات</h1>
         </div>
       </div>
       <p>هنا يمكنك إضافة وصف مختصر حول الغرض من البوابة.</p>
@@ -25,8 +25,8 @@
           </div>
           <h3>{{ article.title }}</h3>
           <p>{{ article.description }}</p>
-          <div class="btn d-flex align-end justify-end">
-            <a href="#">قراءة المزيد</a>
+          <div class="btn d-flex align-end justify-end" style="direction: rtl;">
+            <a href="#" style="text-align: right;">قراءة المزيد</a>
           </div>
         </div>
       </div>

@@ -1,14 +1,14 @@
 <template>
   <section class="features">
     <div class="container headingContainer">
-      <div class="row d-flex justify-between">
+      <div class="row d-flex justify-between" style="direction: rtl;">
         <div class="box">
           <div class="btn">
-            <a href="#">إجراء ثانوي</a>
+            <a href="#" style="text-align: right;">إجراء ثانوي</a>
           </div>
         </div>
         <div class="box">
-          <h1>قسم من نحن</h1>
+          <h1 style="text-align: right;">قسم من نحن</h1>
         </div>
       </div>
       <p>

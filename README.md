@@ -66,12 +66,7 @@ npm run build
 
 ## Setup Instructions
 
-1. **Move Images**: Copy all images from `assets/images/` to `public/assets/images/` directory. In Vite, files in the `public` folder are served from the root, so the paths `/assets/images/...` will work correctly.
 
-   ```bash
-   mkdir -p public/assets
-   cp -r assets/images public/assets/
-   ```
 
 2. **Install Dependencies**:
    ```bash
@@ -85,8 +80,6 @@ npm run build
 
 ## Notes
 
-- All images should be placed in the `public/assets/images/` directory for the current paths to work
-- The CSS file has been moved to `src/assets/css/style.css`
 - All components use Vue 3 Composition API with `<script setup>`
 - Swiper instances are properly initialized and cleaned up in lifecycle hooks
 - The project uses Vite as the build tool for fast development and optimized production builds
