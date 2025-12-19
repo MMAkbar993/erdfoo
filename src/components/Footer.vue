@@ -31,14 +31,16 @@
           <ul class="footer-links">
             <div class="social-icons d-flex align-center flex-d-row-r">
               <a href="#">
-                <img src="/assets/images/instagram.svg" alt="" class="img-fluid" />
-              </a>
+                <img src="/assets/images/twitter.svg" alt="" class="img-fluid" />
+              </a>  
+             
               <a href="#">
                 <img src="/assets/images/linkedin.svg" alt="" class="img-fluid" />
               </a>
               <a href="#">
-                <img src="/assets/images/twitter.svg" alt="" class="img-fluid" />
+                <img src="/assets/images/instagram.svg" alt="" class="img-fluid" />
               </a>
+                 
             </div>
           </ul>
 
