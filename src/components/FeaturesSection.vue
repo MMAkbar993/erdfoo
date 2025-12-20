@@ -37,12 +37,7 @@ import { ref } from 'vue'
 
 const features = ref([
   {
-    icon: '/assets/images/ser-1.svg',
-    value: '1.5M',
-    label: 'شخص'
-  },
-  {
-    icon: '/assets/images/ser-2.svg',
+    icon: '/assets/images/ser-4.svg',
     value: '1.5M',
     label: 'شخص'
   },
@@ -52,7 +47,12 @@ const features = ref([
     label: 'شخص'
   },
   {
-    icon: '/assets/images/ser-4.svg',
+    icon: '/assets/images/ser-2.svg',
+    value: '1.5M',
+    label: 'شخص'
+  },
+  {
+    icon: '/assets/images/ser-1.svg',
     value: '1.5M',
     label: 'شخص'
   }
